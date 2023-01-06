@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddWordActivity"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="30dp">
+
+        <Button
+            android:id="@+id/btnCreateWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create this word"
+            android:layout_marginTop="72dp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/etxtExampleLayout"
+            app:layout_constraintStart_toStartOf="@+id/etxtExampleLayout"
+            app:layout_constraintTop_toBottomOf="@+id/etxtExampleLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etxtWordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Word"
+            android:textColorHint="@color/white"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="clear_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etxtWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:inputType="text"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etxtMeaningLayout"
+            android:layout_marginTop="28dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meaning"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:textColorHint="@color/white"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/etxtWordLayout"
+            app:layout_constraintStart_toStartOf="@+id/etxtWordLayout"
+            app:layout_constraintTop_toBottomOf="@+id/etxtWordLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etxtMeaning"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingHorizontal="5dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etxtDefinitionLayout"
+            android:layout_marginTop="28dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Definition"
+            android:textColorHint="@color/white"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="@+id/etxtMeaningLayout"
+            app:layout_constraintStart_toStartOf="@+id/etxtMeaningLayout"
+            app:layout_constraintTop_toBottomOf="@+id/etxtMeaningLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etxtDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingHorizontal="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etxtExampleLayout"
+            android:layout_marginTop="28dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Example"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:endIconMode="clear_text"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/etxtDefinitionLayout"
+            app:layout_constraintStart_toStartOf="@+id/etxtDefinitionLayout"
+            app:layout_constraintTop_toBottomOf="@+id/etxtDefinitionLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etxtExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="5dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="145dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
